@@ -1,0 +1,10 @@
+.parent{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 100px;
+}
+
+.parent >input{
+
+    margin: 10px;
+}
