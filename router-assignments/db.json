@@ -1,7 +1,7 @@
 {
-  "data" :[{ "name" : "SmartPhone", "price": 30, "id" : 0 },
-          { "name" : "Watch", "price" : 20, "id" : 1 }, 
-          { "name" : "Shirt", "price" : 50, "id" : 2 }, 
-          { "name" : "Pants", "price" : 100, "id" : 3 } 
+  "data" :[{ "name" : "SmartPhone", "price": 30, "id" : 0 ,"brand":"Samsung" ,"features":["android "," waterproof "," 15hr backup "]},
+          { "name" : "Watch", "price" : 20, "id" : 1 ,"brand":"Titan" ,"features":[" android "," waterproof "," 15hr backup "]}, 
+          { "name" : "Shirt", "price" : 50, "id" : 2 ,"brand":"Raymond" ,"features":[" android "," waterproof "," 15hr backup "]}, 
+          { "name" : "Pants", "price" : 100, "id" : 3, "brand":"Zara" ,"features":[" android "," waterproof "," 15hr backup "]} 
           ]
       }
