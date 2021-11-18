@@ -23,18 +23,20 @@ function ProductDetails(){
     },[])
     return (
         <div>
+                <hr></hr>
             ProductDetails
-            <div className="parent2">
-                        <div><h4>Name</h4></div>
-                        <div><h4>Price</h4></div>
-                        <div><h4>Details</h4></div>
-            </div>
+            <hr></hr>
+            
             {products.filter((e)=>e.id==id).map((e)=>(
                 
                  <div className="parent2">
-                   <div>{e.price}</div>
-                  <div>{e.brand}</div>
-                  <div>{e.features.map((e)=>(
+                     
+                    <div>Price:{e.price}</div>
+                   
+                   <div>Brand:{e.brand}</div>
+                  
+                   <div>Features:{e.features.map((e)=>(
+                       
                         <div>{e}</div>
                     ))} </div>
                  </div>   

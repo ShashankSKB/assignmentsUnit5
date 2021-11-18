@@ -16,3 +16,9 @@
     gap: 5px;
     justify-content: center;
 }
+
+.parent2>div{
+    border: 1px solid black;
+    width: 50%;
+    margin: 0px auto;
+}
