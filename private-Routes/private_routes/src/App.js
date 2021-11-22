@@ -5,14 +5,30 @@ import { Login } from './components/login';
 import { Dashboard } from './components/dashboard';
 import { Settings } from './components/settting';
 import { Navbar } from './components/routes';
+import {Switch  ,Route ,Link} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
       <Navbar/>
+
+      <Route exact path="/">
       <Home/>
+      </Route>
+
+      <Route path="/login">
       <Login/>
+      </Route>
+
+      <Route path="/dashboard">
       <Dashboard/>
+      </Route>
+
+      <Route path="/dashboard/settings">
       <Settings/>
+      </Route>
+      
+     
+   
     </div>
   );
 }
