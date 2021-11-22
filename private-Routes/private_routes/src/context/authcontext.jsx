@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Redirect } from "react-router";
 
 
 export const authContext = createContext();
@@ -10,8 +11,11 @@ export const AuthContextProvider= ({children})=>{
     const handleAuth=(username,password)=>{
         if(username=="admin" && password=="admin")
        { 
-           console.log("login successful")
-           setisAuth(true)
+           alert("login successful")
+           setisAuth(true);
+           
+           <Redirect to="/dashboard"></Redirect>
+           
         }
        else{
            alert("enter valid username or password")

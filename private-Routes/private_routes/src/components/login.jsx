@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { authContext } from "../context/authcontext"
+import { Redirect } from "react-router";
 function Login()
 {
     const {isAuth,handleAuth}=useContext(authContext)
@@ -11,6 +12,11 @@ function Login()
         e.preventDefault()
 
         handleAuth(username,password);
+
+        if(isAuth)
+        {
+            <Redirect to="/dashboard"></Redirect>
+        }
     }
 
     return (

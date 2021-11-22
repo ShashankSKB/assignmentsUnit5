@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-
+      <Switch>
       <Route exact path="/">
       <Home/>
       </Route>
@@ -19,15 +19,15 @@ function App() {
       <Login/>
       </Route>
 
-      <Route path="/dashboard">
+      <Route exact path="/dashboard">
       <Dashboard/>
       </Route>
 
-      <Route path="/dashboard/settings">
+      <Route path="/dashboard/setting">
       <Settings/>
       </Route>
       
-     
+      </Switch>
    
     </div>
   );
