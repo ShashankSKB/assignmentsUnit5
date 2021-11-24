@@ -1,24 +1,36 @@
+
+
 const { createContext, useState } = require("react");
 
 
-const themeContext =createContext();
+export const themeContext =createContext();
 
 
-const ThemeContextProvider= ({children})=>{
+export const ThemeContextProvider= ({children})=>{
 
-    const [dark,setDark]=useState(false);
-    const [light,setLight]=useState(true);
+    const [theme,setTheme]=useState("light");
+    
 
     const toggleTheme =()=>{
 
-        setDark(!dark);
-        setLight(!light)
+       if(theme==="light")
+       {
+           document.body.style.background="black";
+           document.body.style.color="white";
+           setTheme("dark")
+       }
+       else{
+        document.body.style.background="white";
+        document.body.style.color="black";
+        setTheme("light")
+       }
     }
 
 
-    const value ={dark,light,toggleTheme}
+    const value ={theme,toggleTheme}
 
     return (
         <themeContext.Provider value={value}>{children}</themeContext.Provider>
     )
 }
+
