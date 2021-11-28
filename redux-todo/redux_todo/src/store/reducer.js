@@ -1,13 +1,12 @@
-import { ADD_TODO } from "./actionTypes";
+import { ADD_TODO, GET_TODO } from "./actionTypes";
 
 const intistate={
-    todo:[
-        {
-            id:1,
-            title:"learn mern",
-            status:false
-        }
-    ]
+    todo:
+    {
+        loading:false,
+        data:[],
+        error:false
+    }
 };
 
 const reducer =(state =intistate,action)=>
@@ -17,9 +16,25 @@ const reducer =(state =intistate,action)=>
         case ADD_TODO:{
             return {
                 ...state,
-                todo:[...state.todo,action.payload]
+                todo:{
+                    
+                    data:[...state.todo.data,action.payload]
+                }
+                
             }
         }
+
+        case GET_TODO:{
+            
+            return {
+                ...state,
+                todo:{
+                   
+                    data:action.payload
+                }
+                
+            }
+    }
 
         default:
             return state

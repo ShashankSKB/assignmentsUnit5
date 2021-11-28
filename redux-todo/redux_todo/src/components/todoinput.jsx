@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux";
 import { addtodo } from "../store/action";
-
+const axios = require('axios');
 function TodoInput()
 {
     const [title,setTitle]=useState("")
@@ -12,17 +12,17 @@ function TodoInput()
         const payload={
             title,
             status:false,
-            id:Math.random()
+           
         };
 
+       const {data}= axios.post('http://localhost:3002/todo', payload)
+        console.log("after add",data)
         dispatch(addtodo(payload))
-
-
     };
 
     return (
         <div>
-            <h1>TODO LIST</h1>
+           
             <input value={title} placeholder="enter your todo" onChange={(e)=>{
                 setTitle(e.target.value)
             }}></input>

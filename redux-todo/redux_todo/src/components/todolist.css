@@ -1,0 +1,23 @@
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 300px;
+
+}
+
+.list >div {
+    margin: 5px auto;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.parent_list{
+    border: 1px solid wheat;
+    margin: 5px 200px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
