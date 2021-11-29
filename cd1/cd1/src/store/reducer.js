@@ -1,4 +1,4 @@
-import {  SHOW_DETAILS } from "./actionTypes.js";
+import {  ADD_SHOW, SHOW_DETAILS } from "./actionTypes.js";
 
 const intistate={
     user:
@@ -30,7 +30,15 @@ const intistate={
                 time:"10am 2pm 6pm"
             }
         ],
-        tickets:[],
+        tickets:[
+            {
+                id:1,
+                image:"https://img.toolstud.io/240x240/3b5998/fff&text=+200x200+",
+                title:"Krrish",
+                time:"9am 12pm 5pm"
+
+            }
+        ],
         show:"",
     }
 };
@@ -39,16 +47,16 @@ const reducer =(state =intistate,action)=>
 {
     switch (action.type)
     {
-        // case ADD_TODO:{
-        //     return {
-        //         ...state,
-        //         todo:{
-                    
-        //             data:[...state.todo.data,action.payload]
-        //         }
+        case ADD_SHOW:{
+            return {
+                ...state.user,
+                user:{
+                    ...state.user,
+                    tickets:[...state.user.tickets,action.payload]
+                }
                 
-        //     }
-        // }
+            }
+        }
 
         case SHOW_DETAILS:{
             

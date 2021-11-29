@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
-import { showdetails } from "../store/action"
+import { addShow, showdetails } from "../store/action"
 
+import { Redirect } from "react-router";
 
-
-
+import { Show } from "./show";
 function Shows()
 {
     const action= useSelector(store =>store.user.action)
@@ -13,6 +13,13 @@ function Shows()
   
      const dispatch = useDispatch()
 
+
+     const addTicket=(e)=>{
+
+        console.log("ticket added ",e)
+        dispatch(addShow(e))
+
+     }
 
     
 
@@ -31,7 +38,7 @@ function Shows()
                     dispatch(showdetails(data))
 
                     
-                        
+                    return <Redirect link="/show"></Redirect>
                     
 
                 }}>
@@ -39,7 +46,7 @@ function Shows()
                     <div><img src={e.image}></img></div>
                     <div>{e.title}</div>
                     <div>{e.time}</div>
-                    <button>BOOK</button>
+                    <button onClick={()=> {addTicket(e)}}>BOOK</button>
                 </div>
           
             ))}
