@@ -1,0 +1,18 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 452px;
+    margin: 0px 500px;
+    /* border: 1px solid black; */
+}
+
+.navbar:nth-child(1){
+    margin: 20px auto;
+   
+
+}
+
+.navbar >h1{
+    margin: 0px;
+    font-weight: 400;
+}
