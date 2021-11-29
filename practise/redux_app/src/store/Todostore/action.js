@@ -1,21 +1,6 @@
 import { INC,DEC,ADD, ADD_TODO_SUCCESS,ADD_TODO_LOADING, ADD_TODO_ERROR, GET_TODO_LOADING, GET_TODO_SUCCESS, GET_TODO_ERROR } from "../Todostore/actionTypes"
 
-export const handleadd=(payload)=>{
-
-    return {
-        type:INC,
-        payload
-    }
-}
-
-export const handlesub=(payload)=>{
-
-    return {
-        type:DEC,
-        payload
-    }
-}
-
+const axios = require('axios');
 
 export const addTodo=(payload)=>{
 
@@ -75,3 +60,4 @@ export const getTodoError=(payload)=>
         payload
     }
 }
+

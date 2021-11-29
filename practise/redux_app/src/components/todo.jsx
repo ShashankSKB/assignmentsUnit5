@@ -2,6 +2,7 @@ import { TodoInput } from "./todoinput"
 import { Todolist } from "./todoList"
 function Todo()
 {
+    console.log("rendering todo")
 
     return (
         <div>

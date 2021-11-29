@@ -14,7 +14,7 @@ function Todolist()
         getTodo();
     },[])
 
-    console.log("todos are get",todos)
+    // console.log("todos are get",todos)
 
     const getTodo=async()=>{
 
@@ -22,10 +22,10 @@ function Todolist()
             
             const {data} =await axios.get('http://localhost:3001/todo')
             console.log("success get",data)
-
+    
             dispatch(getTodoSucess(data))
             
-
+    
         }
         catch(err)
         {
@@ -33,7 +33,7 @@ function Todolist()
         }
     }
 
-    console.log("todo",todos)
+    // console.log("todo",todos)
     return (
         <div>
         hello

@@ -6,6 +6,7 @@ import { handleadd,handlesub  } from "../store/Counterstore/action.js"
 function Counter()
 {
 
+    console.log("rending counter")
     const count= useSelector(store =>store.counter.count)
     const dispatch =useDispatch();
     

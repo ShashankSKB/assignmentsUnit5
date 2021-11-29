@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addTodo ,addTodoLoading,addTodoSucess,addTodoError} from "../store/Todostore/action.js"
+import { addTodoLoading,addTodoSucess,addTodoError} from "../store/Todostore/action.js"
 import { store } from "../store/store"
 const axios = require('axios');
 function TodoInput()
 {   
 
-    const {loading,data,error}=useSelector(store=>store.todos.todo);
+    // const {loading,error}=useSelector(store=>store.todos.todo);
 
     const [title,setTitle]=useState("")
     const dispatch=useDispatch()

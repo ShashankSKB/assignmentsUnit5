@@ -1,11 +1,15 @@
-import { IS_AUTH } from "./actionType"
+
+import { SHOW_DETAILS } from "./actionTypes"
 
 
-export const isauth=(payload)=>{
+
+
+
+export const showdetails=(payload)=>{
 
 
     return {
-        type:IS_AUTH,
+        type:SHOW_DETAILS,
         payload
     }
 }

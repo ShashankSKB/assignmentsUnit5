@@ -1,2 +1,2 @@
-export const ADD_TODO= "addtodo";
-export const GET_TODO="gettodo";
+export const IS_AUTH= "isauth";
+export const SHOW_DETAILS= "showdetails";

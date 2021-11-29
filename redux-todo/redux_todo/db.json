@@ -1,19 +1,14 @@
 {
   "todo": [
     {
-      "title": "shashan",
+      "title": "shopping",
       "status": false,
-      "id": 10
-    },
-    {
-      "title": "asfa",
-      "status": false,
-      "id": 11
+      "id": 12
     }
   ],
   "current": {
-    "title": "asfa",
+    "title": "shopping",
     "status": false,
-    "id": 11
+    "id": 12
   }
 }

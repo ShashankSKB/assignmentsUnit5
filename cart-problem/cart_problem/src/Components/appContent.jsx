@@ -1,12 +1,18 @@
 import { Counter } from '../util/counter';
+import { CardContext } from '../Context/cartContext';
 const axios = require('axios');
-const { useEffect, useState } = require('react');
+const { useEffect, useState, useContext } = require('react');
 
 
 
 function Content()
 {
+
+    
+
     const [data,setData]=useState([])
+    
+    
     useEffect(()=>{
     axios.get('http://localhost:3004/productDetails')
     .then(function (response) {
@@ -21,7 +27,7 @@ function Content()
 
     const addtocart=(e)=>{
 
-        axios.post('http://localhost:3004/cart', {e})
+        axios.post('http://localhost:3004/cart', e)
           .then(function (response) {
             console.log(response);
           })
@@ -41,8 +47,9 @@ function Content()
                 <div>{e.product_name}</div>
                 <div>Description : {e.description}</div>
                 <div>Price : {e.price}</div>
-                <div><Counter/></div>
-                <div><button onClick={()=>{addtocart(e)}}>ADD TO CART</button></div>
+                <div><Counter /></div>
+                <div><button onClick={()=>{addtocart(e);
+                                            }}>ADD TO CART</button></div>
                 <br/>
                 </div>
                 
