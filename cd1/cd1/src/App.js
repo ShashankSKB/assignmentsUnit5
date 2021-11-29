@@ -9,8 +9,10 @@ import { Navbar } from './components/navbar';
 function App() {
   return (
     <div className="App">
-    
+   
     <Navbar/>
+
+    <h1>BOOK MY SHOW</h1>
     <Switch>
 
   
@@ -28,7 +30,7 @@ function App() {
     <Route path="/show">
      
       <Show>
-        
+
       </Show>
     </Route>
 

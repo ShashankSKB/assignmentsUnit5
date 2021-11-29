@@ -16,6 +16,7 @@ function Tickets()
                 <div>
                        <div><img src={e.image}></img></div>
                 <div>{e.title}</div>
+                <button>DOWNLOAD</button>
 
                 </div>
              
