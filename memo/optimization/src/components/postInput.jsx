@@ -8,6 +8,26 @@ function PostInput()
     const [body,setBody]=useState("");
     const [list,setList]=useState([]);
 
+    const handleVerify=(id)=>{
+
+        console.log("toggle triggered")
+        const updatedList =list.map((e)=>{
+
+            if(e.id==id)
+            {
+                e.verify = !e.verify
+            }
+
+            return e;
+
+        })
+
+        setList(updatedList)
+
+    }
+      
+    
+
     const handleADD=()=>{
         
         console.log("title",title);
@@ -36,7 +56,7 @@ function PostInput()
                 setBody(e.target.value)
             }}></textarea>
             <button onClick={handleADD}>ADD POST</button>
-            <PostList list={list}></PostList>
+            <PostList list={list} handleVerify={handleVerify}></PostList>
         </div>
     )
 }

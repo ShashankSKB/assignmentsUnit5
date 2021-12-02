@@ -1,10 +1,13 @@
 import "./posts.css"
 
-function PostList( {list})
+function PostList( {list,handleVerify})
 {
 
-  
+    const handleverification=(id)=>{
 
+        handleVerify(id)
+    }
+ 
     console.log(list)
     return (
         <div>
@@ -19,7 +22,8 @@ function PostList( {list})
                             title:{e.title}</div>
                        
                         <div>{e.body}</div>
-                        <button>Verify</button>
+                        <div>{e.verify ?"verified" :"not verified"}</div>
+                        <button onClick={()=>handleverification(e.id)}>Verify</button>
                     </div>
                 ))}
             </div>
