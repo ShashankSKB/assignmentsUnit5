@@ -3,7 +3,7 @@ import { Box } from "./box"
 import "./tic.css"
 function Tic()
 {
-
+    const [flag,setFlag]=useState(true);
     const [player,setPlayer]=useState("O")
 
     const [value,setValue]=useState("")
@@ -48,10 +48,16 @@ function Tic()
                         if(player=="O")
                         {
                             alert("Winner X")
+                            // setFlag(false);
+                            setBoard(["","","","","","","",""])
+                            
                         }
                         else
                         {
                             alert("Winner O")
+                            setFlag(false);
+                            // setBoard(["","","","","","","",""])
+                            setBoard(["","","","","","","",""])
                         }
                         
                         return;
