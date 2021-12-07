@@ -1,5 +1,5 @@
 
-const Time =(time)=>{
+const temp =(time)=>{
 
     var time=time;
 
@@ -11,11 +11,11 @@ const Time =(time)=>{
     const min =Math.floor((time%3.6e+6)/60000);
     const sec= Math.floor((time%3.6e+6)%60000/1000);
 
-    const x= hr+" hr "+min+" min "+sec+" sec "
+    const x= hr+" hr "+min+" min "+sec+" sec"
     return x;
 
 }
 
-console.log(Time(5200   ))
+console.log(temp(5200))
 
-module.export= {Time}
+module.exports= temp
