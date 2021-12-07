@@ -12,6 +12,7 @@ function Tic()
 
     console.log("board ",board[0])
 
+    const [count,setCount]=useState(0);
     const outcomes=[
         [0,1,2],
         [3,4,5],
@@ -27,11 +28,13 @@ function Tic()
         
         checkWinner();
 
+
     },player)
 
     const checkWinner=()=>{
 
         console.log("checking")
+        setCount((prev)=>prev+1)
         for(var i=0;i<outcomes.length;i++)
         {
             let curr=outcomes[i];
@@ -63,6 +66,13 @@ function Tic()
                         return;
                         
                     }
+                }
+
+                if(count==9)
+                {
+                    alert("DRAW")
+                    setCount(1)
+                    return
                 }
 
                 

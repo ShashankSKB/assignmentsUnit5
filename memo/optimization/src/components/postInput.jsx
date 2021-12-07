@@ -36,7 +36,8 @@ function PostInput()
             [...list,{
                 title:title,
                 body:body,
-                verify:false
+                verify:false,
+                id:Math.random()
             }]
         )
 

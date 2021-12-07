@@ -38,7 +38,7 @@ function Shows()
                     dispatch(showdetails(data))
 
                     
-                    return <Redirect to="/show"></Redirect>
+                    return <Redirect link="/show"></Redirect>
                     
 
                 }}>

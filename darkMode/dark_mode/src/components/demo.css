@@ -1,0 +1,27 @@
+.rectange{
+    border:1px solid black
+
+    
+}
+
+.square{
+    border:1px solid black;
+    display: flex;
+    width: 50%;
+
+}
+
+.parent{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.parent >div{
+    height: 50%;
+}
+.square >div{
+    width: 50%;
+    border: 1px solid black;
+}
