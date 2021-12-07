@@ -1,0 +1,1 @@
+const Time =require("../index");
