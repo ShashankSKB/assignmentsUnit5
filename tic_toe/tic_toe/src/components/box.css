@@ -1,0 +1,14 @@
+
+.square {
+    width: 100px ;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 50px auto;
+    
+}
+
+.square:hover{
+    background-color: #add8e6;
+    scale: 1.5px;
+}
