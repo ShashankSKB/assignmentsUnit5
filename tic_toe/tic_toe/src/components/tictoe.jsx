@@ -3,9 +3,9 @@ import { Box } from "./box"
 import "./tic.css"
 function Tic()
 {
-    const [flag,setFlag]=useState(true);
+    const [flag,setFlag]=useState(false);
     const [player,setPlayer]=useState("O")
-
+    const [Winner,setWinner]=useState("")
     const [value,setValue]=useState("")
 
     const [board,setBoard]=useState(["","","","","","","","",""])
@@ -27,7 +27,7 @@ function Tic()
     useEffect(()=>{
         
         checkWinner();
-
+        
 
     },player)
 
@@ -51,16 +51,20 @@ function Tic()
                         if(player=="O")
                         {
                             alert("Winner X")
-                            // setFlag(false);
+                            setWinner("X")
+                            setFlag(true);
                             setBoard(["","","","","","","",""])
-                            
+                            setCount(1)
                         }
                         else
                         {
                             alert("Winner O")
-                            setFlag(false);
+                            
                             // setBoard(["","","","","","","",""])
                             setBoard(["","","","","","","",""])
+                            setWinner("O")
+                            setFlag(true);
+                            setCount(1)
                         }
                         
                         return;
@@ -71,7 +75,7 @@ function Tic()
                 if(count==9)
                 {
                     alert("DRAW")
-                    setCount(1)
+                    setCount(0)
                     return
                 }
 
@@ -82,12 +86,14 @@ function Tic()
 
     }
 
+   
+
     const handlePlayer=(curr)=>{
 
         console.log("curr",curr)
        
-        setBoard( board.map((val, idx) => {
-            if (idx === curr && val === "") {
+        setBoard( board.map((val, indx) => {
+            if (indx === curr && val === "") {
               return player;
             }
             return val;
@@ -108,8 +114,16 @@ function Tic()
        
     }
 
+    const reset=()=>{
+        setPlayer("O")
+        setBoard(["","","","","","","",""])
+        setCount(0);
+        setWinner("O")
+        setFlag(true);
+    }
+
     return (
-        <div>
+        <div className="parent">
             <h1>TIC TOE</h1>
             <div className="row">
             <Box value={board[0]} handlePlayer={()=>handlePlayer(0)}></Box>
@@ -128,6 +142,17 @@ function Tic()
             <Box value={board[7]}  handlePlayer={()=>handlePlayer(7)}></Box>
             <Box value={board[8]}  handlePlayer={()=>handlePlayer(8)}></Box>
             </div>
+
+            <div>
+                <h1>Player  :{player}</h1>
+            </div>
+
+            {/* <div>
+                {flag&& <h1>Winner :{Winner}</h1>}
+            </div> */}
+
+            <div className="button"  onClick={reset}><h1>NEW GAME</h1></div>
+
             
         </div>
     )

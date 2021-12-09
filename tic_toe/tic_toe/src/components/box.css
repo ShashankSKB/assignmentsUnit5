@@ -8,7 +8,12 @@
     
 }
 
-.square:hover{
-    background-color: #add8e6;
+ .square:hover{
+    background-color: rgb(207, 252, 134);
     scale: 1.5px;
-}
+} 
+/* 
+.square:focus {
+    background-color: red;
+    scale: 1.2px;
+  } */
