@@ -20,7 +20,7 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import { useState } from 'react';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react'; 
 import { styled } from '@mui/material/styles';
 const drawerWidth = 240;
 
@@ -34,7 +34,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 
-function Navbar()
+function Navbar(props)
 {const theme = useTheme();
   const [open,setOpen]=useState(false)
   const handleBar=()=>{
@@ -206,6 +206,14 @@ function Navbar()
            
       
         </Drawer>
+        <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open
+        })}
+      >
+        <div className={classes.contentHeader} />
+        {props.children}
+      </main>
         
 
         </div>
