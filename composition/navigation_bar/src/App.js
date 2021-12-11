@@ -1,23 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import { Item } from './components/item';
-import { Navbar } from './components/navbar';
-import { Sitename } from './components/sitename';
+import { Item } from './components/navbar/item';
+import { Sitename } from './components/navbar/sitename';
+import { Navbar } from './components/navbar/navbar';
+import { Form } from './components/creditcard/form';
 function App() {
   return (
     <div className="App">
-      <Navbar>
-        <Sitename>
-          <Item label="Site name"></Item>
-        </Sitename>
-      <Item label="About us"></Item>
-      <Item label="Prices"></Item>
-      <Item label="Other"></Item>
-      <Item label="Start page"></Item>
-      <Item label="Offer"></Item>
-      <Item label="Contact"></Item>
-      </Navbar>
-     
+     <Form></Form>
     </div>
   );
 }
