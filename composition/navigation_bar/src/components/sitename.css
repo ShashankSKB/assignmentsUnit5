@@ -1,0 +1,11 @@
+.sitename{
+    display: flex;
+    flex: 1;
+    margin: 0px 10px;
+}
+
+.sitename :nth-child(1)
+{
+    background-color: rgb(23, 23, 129);
+    margin: 10px;
+}

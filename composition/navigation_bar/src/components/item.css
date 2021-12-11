@@ -1,0 +1,9 @@
+.item_child{
+    color: white;
+   
+
+}
+
+.item_child >h3{
+    font-weight: 250;
+}
