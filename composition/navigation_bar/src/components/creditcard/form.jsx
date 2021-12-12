@@ -43,18 +43,31 @@ function Form()
                 {/* <input placeholder="card number" name="cardNumber" onChange={handleChange}></input> */}
                 <ItemForm name="cardNumber" src="https://cdn-icons-png.flaticon.com/512/6283/6283675.png" value="card number" handle={handleChange}></ItemForm>
 
+                <div className="expirybox">
+
+                <div>
                 <label>expiry month</label>
                 {/* <input placeholder="expiry month" name="expiryMonth" onChange={handleChange}></input> */}
                 <ItemForm name="expiryMonth" src="https://cdn-icons-png.flaticon.com/512/6283/6283675.png" value="expiry month" handle={handleChange}></ItemForm>
 
-                <label>expiry year </label>
+                </div>
+               
+               <div>
+               <label>expiry year </label>
                 {/* <input placeholder="expiry year " name="expiryYear" onChange={handleChange}></input> */}
                 <ItemForm name="expiryYear" src="https://cdn-icons-png.flaticon.com/512/6283/6283675.png" value="expiry year" handle={handleChange}></ItemForm>
 
-                <label>CVC</label>
+               </div>
+               
+
+               <div>
+               <label>CVC</label>
                 {/* <input placeholder="cvc" name="cvc" onChange={handleChange}></input> */}
                 <ItemForm name="cvc" src="https://cdn-icons-png.flaticon.com/512/6283/6283675.png" value="cvc" handle={handleChange}></ItemForm>
 
+               </div>
+                
+                </div>
                 <h4>Payment amount: 1200 $</h4>
                 <input type="submit" value="pay" ></input>
             </form>
