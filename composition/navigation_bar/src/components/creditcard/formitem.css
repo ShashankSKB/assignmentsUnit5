@@ -1,0 +1,22 @@
+.form_item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid palevioletred;
+    width: fit-content;
+    margin-bottom: 20px;
+    
+    
+   
+}
+
+.form_item img{
+    width: 30px;
+    height: 20px;
+}
+
+.form_item >input{
+    outline: none;
+    border: none;
+   
+}
+
