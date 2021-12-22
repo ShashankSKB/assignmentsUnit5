@@ -1,5 +1,5 @@
 const temp =require("../index")
-
+const sum =require("../sum")
 
 describe("TIME CHECKING",function(){
 
@@ -26,5 +26,16 @@ describe("TIME CHECKING",function(){
 
     test("converting time to  hour ,minutes and seconds",()=>{
         expect(temp(9000000)).toBe("2 hr 30 min 0 sec")
+    })
+})
+
+describe("Sum checking",function (){
+
+    test("addition of two positive number",()=>{
+        expect(sum(3,4)).toBe(7)
+    })
+
+    test("addition of two negative number",()=>{
+        expect(sum(-3,-4)).toBe(-7)
     })
 })
